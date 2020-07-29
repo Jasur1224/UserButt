@@ -231,14 +231,14 @@ async def afk_on_pm(sender):
                     wday = now + datetime.timedelta(days=-days)
                     afk_since = wday.strftime('%A')
             elif hours > 1:
-                afk_since = f"`{int(hours)}h{int(minutes)}m` ago"
+                afk_since = f"`{int(hours)} soat {int(minutes)} minut`"
             elif minutes > 0:
-                afk_since = f"`{int(minutes)}m{int(seconds)}s` ago"
+                afk_since = f"`{int(minutes)} minut {int(seconds)} sekund`"
             else:
-                afk_since = f"`{int(seconds)}s` ago"
+                afk_since = f"`{int(seconds)} sekund`"
             if sender.sender_id not in USERS:
                 if AFKREASON:
-                    await sender.reply(f"I'm AFK since {afk_since}.\
+                    await sender.reply(f"Men {afk_since} dan buyon telegramda emasman :-!.\
                         \nReason: `{AFKREASON}`")
                 else:
                     await sender.reply(str(choice(AFKSTR)))
