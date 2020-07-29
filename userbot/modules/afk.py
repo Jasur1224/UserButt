@@ -233,7 +233,7 @@ async def afk_on_pm(sender):
             elif hours > 1:
                 afk_since = f"`{int(hours)} soat {int(minutes)} minut`"
             elif minutes > 0:
-                afk_since = f"`{int(minutes)} minut {int(seconds)} sekund`"
+                afk_since = f"`{int(minutes)} minut {int(seconds)} soniya`"
             else:
                 afk_since = f"`{int(seconds)} sekund`"
             if sender.sender_id not in USERS:
