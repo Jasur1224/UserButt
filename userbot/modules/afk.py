@@ -239,7 +239,7 @@ async def afk_on_pm(sender):
             if sender.sender_id not in USERS:
                 if AFKREASON:
                     await sender.reply(f"Men {afk_since} dan buyon telegramda emasman :-!.\
-                        \nReason: `{AFKREASON}`")
+                        \nSabab: `{AFKREASON}`")
                 else:
                     await sender.reply(str(choice(AFKSTR)))
                 USERS.update({sender.sender_id: 1})
@@ -247,8 +247,8 @@ async def afk_on_pm(sender):
             elif apprv:
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await sender.reply(f"I'm still AFK since {afk_since}.\
-                            \nReason: `{AFKREASON}`")
+                        await sender.reply(f"Men {afk_since} dan buyon telegramda emasman :-!.\
+                            \nSabab: `{AFKREASON}`")
                     else:
                         await sender.reply(str(choice(AFKSTR)))
                 USERS[sender.sender_id] = USERS[sender.sender_id] + 1
